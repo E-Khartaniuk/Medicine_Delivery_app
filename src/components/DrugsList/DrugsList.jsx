@@ -17,6 +17,8 @@ function DrugsList() {
   }
   useEffect(() => {
     fetchData();
+
+    setCart(JSON.parse(localStorage.getItem('cart')) || []);
   }, []);
   // console.log('medicines', medicines);
 
@@ -41,6 +43,7 @@ function DrugsList() {
 
     try {
       const response = axios.patch(URL, { favorite }).then(res => {
+        console.log('res', res);
         fetchData();
       });
       return response;
