@@ -6,25 +6,21 @@ function Cart() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalOerder, setTotalOrder] = useState([]);
 
-  const calculateInitialPrice = cartList => {
-    const initialTotal = cartList.reduce((acc, item) => {
-      return item.price_per_unit + acc;
-    }, 0);
-    setTotalPrice(initialTotal);
-  };
-
   useEffect(() => {
-    const cartList = JSON.parse(localStorage.getItem('cart'));
-    setCartList(cartList);
+    const medicinesFromLS = JSON.parse(localStorage.getItem('cart'));
+    if (medicinesFromLS) {
+      const addOrderQuantity = medicinesFromLS.map(medicine => {
+        return { ...medicine, order_quantity: 1 };
+      });
+      setCartList(addOrderQuantity);
+      setTotalOrder(addOrderQuantity);
+      const initialTotal = addOrderQuantity.reduce((acc, item) => {
+        return item.price_per_unit + acc;
+      }, 0);
 
-    calculateInitialPrice(cartList);
-    // const initialTotal = cartList.reduce((acc, item) => {
-    //   return item.price_per_unit + acc;
-    // }, 0);
-    // setTotalPrice(initialTotal);
+      setTotalPrice(initialTotal);
+    }
   }, []);
-
-  console.log('totalPrice', totalPrice);
 
   useEffect(() => {
     const totalCartPrice = totalOerder.reduce((acc, item) => {
@@ -36,38 +32,35 @@ function Cart() {
   }, [totalOerder]);
 
   const handleCalculateTotalPrice = newItem => {
-    const existingItem = totalOerder.find(order => order._id === newItem._id);
-    if (existingItem) {
-      setTotalOrder(prevOrder =>
-        prevOrder.map(order => (order._id === newItem._id ? newItem : order))
-      );
-
-      setTotalOrder(prevOrder => [
-        ...prevOrder,
-        { ...newItem, order_quantity: 1 },
-      ]);
-    }
+    // const existingItem = totalOerder.find(order => order._id === newItem._id);
+    // console.log('existingItem', existingItem);
+    console.log('newItem', newItem);
+    // if (existingItem) {
+    setTotalOrder(prevOrder =>
+      prevOrder.map(order => (order._id === newItem._id ? newItem : order))
+    );
   };
 
-  // const calculateTotalPrice = () => {};
-  //
   return (
     <div>
-      <div>
-        <ul>
-          {cartList.map(item => {
-            return (
-              <CartItem
-                key={item._id}
-                item={item}
-                handleCalculateTotalPrice={handleCalculateTotalPrice}
-              ></CartItem>
-            );
-          })}
-        </ul>
-      </div>
-
-      <p>Total price: {totalPrice}$</p>
+      {cartList.length ? (
+        <div>
+          <ul>
+            {cartList.map(item => {
+              return (
+                <CartItem
+                  key={item._id}
+                  item={item}
+                  handleCalculateTotalPrice={handleCalculateTotalPrice}
+                ></CartItem>
+              );
+            })}
+          </ul>
+          <p>Total price: {totalPrice.toFixed(2)}$</p>
+        </div>
+      ) : (
+        <div>Your cart is empty</div>
+      )}
     </div>
   );
 }
