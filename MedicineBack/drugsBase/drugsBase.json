@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "drug": "Paracetamol",
+        "quantity": 100,
+        "manufacturer": "Generic Pharma",
+        "expiry_date": "2025-06-30",
+        "price_per_unit": 0.5,
+        "location": "Pharmacy A",
+        "available": true
+    },
+    {
+        "id": 2,
+        "drug": "Ibuprofen",
+        "quantity": 50,
+        "manufacturer": "MediCorp",
+        "expiry_date": "2024-12-15",
+        "price_per_unit": 0.8,
+        "location": "Pharmacy B",
+        "available": true
+    },
+    {
+        "id": 3,
+        "drug": "Aspirin",
+        "quantity": 75,
+        "manufacturer": "HealthMeds",
+        "expiry_date": "2024-11-20",
+        "price_per_unit": 0.6,
+        "location": "Pharmacy C",
+        "available": false
+    },
+    {
+        "id": 4,
+        "drug": "Omeprazole",
+        "quantity": 30,
+        "manufacturer": "Pharmaceuticals Inc.",
+        "expiry_date": "2025-03-10",
+        "price_per_unit": 1.2,
+        "location": "Pharmacy D",
+        "available": true
+    },
+    {
+        "id": 5,
+        "drug": "Amoxicillin",
+        "quantity": 60,
+        "manufacturer": "BioPharm",
+        "expiry_date": "2024-09-25",
+        "price_per_unit": 1.5,
+        "location": "Pharmacy E",
+        "available": true
+    },
+    {
+        "id": 6,
+        "drug": "Loratadine",
+        "quantity": 45,
+        "manufacturer": "MediCure",
+        "expiry_date": "2024-08-12",
+        "price_per_unit": 0.9,
+        "location": "Pharmacy F",
+        "available": false
+    },
+    {
+        "id": 7,
+        "drug": "Ciprofloxacin",
+        "quantity": 25,
+        "manufacturer": "MediCo",
+        "expiry_date": "2025-02-28",
+        "price_per_unit": 1.8,
+        "location": "Pharmacy G",
+        "available": true
+    },
+    {
+        "id": 8,
+        "drug": "Metformin",
+        "quantity": 80,
+        "manufacturer": "HealthPharma",
+        "expiry_date": "2024-10-15",
+        "price_per_unit": 0.7,
+        "location": "Pharmacy H",
+        "available": true
+    },
+    {
+        "id": 9,
+        "drug": "Simvastatin",
+        "quantity": 55,
+        "manufacturer": "MediLabs",
+        "expiry_date": "2024-07-20",
+        "price_per_unit": 1.1,
+        "location": "Pharmacy I",
+        "available": false
+    },
+    {
+        "id": 10,
+        "drug": "Citalopram",
+        "quantity": 70,
+        "manufacturer": "MindMeds",
+        "expiry_date": "2025-01-05",
+        "price_per_unit": 1.0,
+        "location": "Pharmacy J",
+        "available": true
+    },
+    {
+        "id": 11,
+        "drug": "Atorvastatin",
+        "quantity": 40,
+        "manufacturer": "PharmaGen",
+        "expiry_date": "2024-11-30",
+        "price_per_unit": 1.3,
+        "location": "Pharmacy K",
+        "available": true
+    },
+    {
+        "id": 12,
+        "drug": "Diclofenac",
+        "quantity": 65,
+        "manufacturer": "HealthCare",
+        "expiry_date": "2024-12-20",
+        "price_per_unit": 1.4,
+        "location": "Pharmacy L",
+        "available": false
+    },
+    {
+        "id": 13,
+        "drug": "Metoprolol",
+        "quantity": 20,
+        "manufacturer": "HeartMeds",
+        "expiry_date": "2025-04-15",
+        "price_per_unit": 1.6,
+        "location": "Pharmacy M",
+        "available": true
+    },
+    {
+        "id": 14,
+        "drug": "Prednisone",
+        "quantity": 90,
+        "manufacturer": "BioHealth",
+        "expiry_date": "2024-06-25",
+        "price_per_unit": 1.7,
+        "location": "Pharmacy N",
+        "available": true
+    },
+    {
+        "id": 15,
+        "drug": "Cephalexin",
+        "quantity": 35,
+        "manufacturer": "Pharmax",
+        "expiry_date": "2025-05-10",
+        "price_per_unit": 1.9,
+        "location": "Pharmacy O",
+        "available": false
+    }
+]
